@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-calculator"></i>
+            <span>Calculadora Científica</span>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="calculator">
+                <input type="text" id="display" readonly>
+                <div class="buttons">
+                    <!-- Operações Científicas -->
+                    <button class="scientific" onclick="appendToDisplay('sin(')">sin</button>
+                    <button class="scientific" onclick="appendToDisplay('cos(')">cos</button>
+                    <button class="scientific" onclick="appendToDisplay('tan(')">tan</button>
+                    <button class="scientific" onclick="appendToDisplay('sqrt(')">√</button>
+                    <button class="scientific" onclick="appendToDisplay('log(')">log</button>
+                    
+                    <!-- Números e Operadores Básicos -->
+                    <button class="number" onclick="appendToDisplay('7')">7</button>
+                    <button class="number" onclick="appendToDisplay('8')">8</button>
+                    <button class="number" onclick="appendToDisplay('9')">9</button>
+                    <button class="operator" onclick="appendToDisplay('+')">+</button>
+                    <button class="operator" onclick="appendToDisplay('(')">(</button>
+                    
+                    <button class="number" onclick="appendToDisplay('4')">4</button>
+                    <button class="number" onclick="appendToDisplay('5')">5</button>
+                    <button class="number" onclick="appendToDisplay('6')">6</button>
+                    <button class="operator" onclick="appendToDisplay('-')">-</button>
+                    <button class="operator" onclick="appendToDisplay(')')">)</button>
+                    
+                    <button class="number" onclick="appendToDisplay('1')">1</button>
+                    <button class="number" onclick="appendToDisplay('2')">2</button>
+                    <button class="number" onclick="appendToDisplay('3')">3</button>
+                    <button class="operator" onclick="appendToDisplay('*')">×</button>
+                    <button class="scientific" onclick="appendToDisplay('π')">π</button>
+                    
+                    <button class="number" onclick="appendToDisplay('0')">0</button>
+                    <button class="number" onclick="appendToDisplay('.')">.</button>
+                    <button class="operator" onclick="calculate()">=</button>
+                    <button class="operator" onclick="appendToDisplay('/')">/</button>
+                    <button class="scientific" onclick="appendToDisplay('e')">e</button>
+                    
+                    <!-- Botões Adicionais -->
+                    <button class="operator" onclick="clearDisplay()">C</button>
+                    <button class="scientific" onclick="appendToDisplay('^')">x^y</button>
+                    <button class="scientific" onclick="appendToDisplay('ln(')">ln</button>
+                </div>
+            </div>
+            <div class="history">
+                <h3>Histórico</h3>
+                <div id="history-entries"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Contato</h4>
+            <p>lima1.arthur@gmail.com</p>
+            <p>(22) 998492906</p>
+        </div>
+        <div class="footer-column">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="https://github.com/Arthurlimaaa2" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/5522998492906" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/arthur-lima-correa-dos-santos/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
